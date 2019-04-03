@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="model.Users" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,12 +73,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 </head>
 <body>
+	<%
+		Users users = (Users) session.getAttribute("user");
+		if(users == null){
+			response.sendRedirect("/Shop/login.jsp");
+		}
+	%>
+
+
+
 	<jsp:include page="header.jsp"></jsp:include>
 
 	<div class="container">
 		<div class="account">
 			<h2 class="account-in">checkout</h2>
-			<form action="UsersServlet" method="POST">
+			<form action="CheckOutServlet" method="POST">
 
 				<div>
 					<span>Address *</span> 
@@ -90,7 +101,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</select>
 					
 				</div>
-				<input type="hidden" value="login" name="command"> 
 				<input type="submit" value="Checkout">
 			</form>
 		</div>

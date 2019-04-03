@@ -89,7 +89,7 @@
 									</div>
 									<div class="login_buttons">
 										<div class="check_button">
-											<a href="checkout.html">Check out</a>
+											<a href="checkout.jsp">Check out</a>
 										</div>
 										<div class="clearfix"></div>
 									</div>
