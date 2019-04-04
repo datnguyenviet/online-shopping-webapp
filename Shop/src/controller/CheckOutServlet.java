@@ -18,6 +18,7 @@ import model.BillDetail;
 import model.Cart;
 import model.Item;
 import model.Users;
+import tools.SendMail;
 
 
 public class CheckOutServlet extends HttpServlet {
@@ -59,6 +60,9 @@ public class CheckOutServlet extends HttpServlet {
 						list.getValue().getProduct().getProductPrice(),
 						list.getValue().getQuantity()));
 			}
+			SendMail sm = new SendMail();
+			sm.sendMail(users.getUserEmail(), "Outlet's orders confirm message", 
+					"Hello " + users.getUserEmail()+ "\nTotal " + cart.totalCart());
 			cart = new Cart();
 			session.setAttribute("cart", cart);
 		} catch (Exception e) {

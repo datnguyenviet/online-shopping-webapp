@@ -15,5 +15,10 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/vnd/Desktop/github/Java_webapp/online-shopping-webapp/Shop/lib/smtp.jar"/>
+	<classpathentry kind="lib" path="/home/vnd/Desktop/github/Java_webapp/online-shopping-webapp/Shop/lib/pop3.jar"/>
+	<classpathentry kind="lib" path="/home/vnd/Desktop/github/Java_webapp/online-shopping-webapp/Shop/lib/mailapi.jar"/>
+	<classpathentry kind="lib" path="/home/vnd/Desktop/github/Java_webapp/online-shopping-webapp/Shop/lib/imap.jar"/>
+	<classpathentry kind="lib" path="/home/vnd/Desktop/github/Java_webapp/online-shopping-webapp/Shop/lib/dsn.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
