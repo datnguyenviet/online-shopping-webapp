@@ -18,17 +18,15 @@
 	<%
 		CategoryDAO categoryDAO = new CategoryDAO();
 		Users users = null;
-		if(session.getAttribute("user") != null){
+		if (session.getAttribute("user") != null) {
 			users = (Users) session.getAttribute("user");
 		}
-		
+
 		Cart cart = (Cart) session.getAttribute("cart");
-		if (cart == null){
+		if (cart == null) {
 			cart = new Cart();
 			session.setAttribute("cart", cart);
 		}
-		
-
 	%>
 
 	<!--header-->
@@ -41,9 +39,11 @@
 					</div>
 					<div class="header-in">
 						<ul class="icon1 sub-icon1">
-							<% if(users != null){ %>
+							<%
+								if (users != null) {
+							%>
 							<li><a href="wishlist.jsp"><%=users.getUserEmail()%></a></li>
-							<% 
+							<%
 								}
 							%>
 							<li><a href="wishlist.html">WISH LIST (0)</a></li>
@@ -51,40 +51,44 @@
 							<li><a href="#"> SHOPPING CART</a></li>
 							<li><a href="checkout.html">CHECKOUT</a></li>
 							<li><div class="cart">
-									<a href="#" class="cart-in"> </a> <span><%=cart.countItem() %></span>
+									<a href="#" class="cart-in"> </a> <span><%=cart.countItem()%></span>
 								</div>
 								<ul class="sub-icon1 list">
 									<h3>Recently added items</h3>
 									<div class="shopping_cart">
 
-										<% for (Map.Entry<Long, Item> list: cart.getCartItems().entrySet()) { %>
+										<%
+											for (Map.Entry<Long, Item> list : cart.getCartItems().entrySet()) {
+										%>
 										<div class="cart_box">
 											<div class="message">
 												<div class="alert-close"></div>
 												<div class="list_img">
 													<img
-														src="<%= list.getValue().getProduct().getProductImage() %>"
+														src="<%=list.getValue().getProduct().getProductImage()%>"
 														class="img-responsive" alt="">
 												</div>
 												<div class="list_desc">
 													<h4>
 														<a
-															href="CartServlet?command=remove&productID=<%=list.getValue().getProduct().getProductID()%>"><%= list.getValue().getProduct().getProductName() %></a>
+															href="CartServlet?command=remove&productID=<%=list.getValue().getProduct().getProductID()%>"><%=list.getValue().getProduct().getProductName()%></a>
 													</h4>
-													<%= list.getValue().getQuantity()%><span class="actual">
-														$<%= list.getValue().getProduct().getProductPrice() %></span>
+													<%=list.getValue().getQuantity()%><span class="actual">
+														$<%=list.getValue().getProduct().getProductPrice()%></span>
 												</div>
 												<div class="clearfix"></div>
 											</div>
 										</div>
-										<% } %>
+										<%
+											}
+										%>
 
 
 									</div>
 									<div class="total">
 										<div class="total_left">Cart Subtotal:</div>
 										<div class="total_right">
-											$<%=cart.totalCart() %></div>
+											$<%=cart.totalCart()%></div>
 										<div class="clearfix"></div>
 									</div>
 									<div class="login_buttons">
@@ -110,13 +114,13 @@
 						<li><a href="#">Product list</a>
 							<ul class="drop">
 								<%
-								for(Category c: categoryDAO.getListCategory()){
-							%>
-								<li><a href="products.jsp?category=<%=c.getCategoryID()%>"><%=c.getCategoryName()%></a></li>
+									for (Category c : categoryDAO.getListCategory()) {
+								%>
+								<li><a
+									href="products.jsp?categoryID=<%=c.getCategoryID()%>&pages=1"><%=c.getCategoryName()%></a></li>
 								<%
-								
-								}
-							%>
+									}
+								%>
 							</ul></li>
 						<li><a href="products.jsp"> Tablets</a></li>
 						<li><a href="products.jsp">Components</a></li>

@@ -21,7 +21,7 @@ public class SendMail {
 		Session session = Session.getInstance(props, new javax.mail.Authenticator() {
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("tkmuado@gmail.com", "456");
+				return new PasswordAuthentication("tkmuado@gmail.com", "Horizon123");
 			}
 		});
 		try {

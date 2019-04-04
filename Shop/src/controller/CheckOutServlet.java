@@ -20,25 +20,23 @@ import model.Item;
 import model.Users;
 import tools.SendMail;
 
-
 public class CheckOutServlet extends HttpServlet {
-	
+
 	private BillDAO billDAO = new BillDAO();
 	private BillDetailDAO billDetailDAO = new BillDetailDAO();
-       
 
-    public CheckOutServlet() {
+	public CheckOutServlet() {
 
-    }
-
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 	}
 
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		String payment = request.getParameter("payment");
 		String address = request.getParameter("address");
 		HttpSession session = request.getSession();
@@ -54,19 +52,17 @@ public class CheckOutServlet extends HttpServlet {
 			bill.setDate(new Timestamp(new Date().getTime()));
 			bill.setTotal(cart.totalCart());
 			billDAO.insertBill(bill);
-			for(Map.Entry<Long, Item> list: cart.getCartItems().entrySet()) {
-				billDetailDAO.insertBillDetail(new BillDetail(0, ID, 
-						list.getValue().getProduct().getProductID(),
-						list.getValue().getProduct().getProductPrice(),
-						list.getValue().getQuantity()));
+			for (Map.Entry<Long, Item> list : cart.getCartItems().entrySet()) {
+				billDetailDAO.insertBillDetail(new BillDetail(0, ID, list.getValue().getProduct().getProductID(),
+						list.getValue().getProduct().getProductPrice(), list.getValue().getQuantity()));
 			}
-			SendMail sm = new SendMail();
-			sm.sendMail(users.getUserEmail(), "Outlet's orders confirm message", 
-					"Hello " + users.getUserEmail()+ "\nTotal " + cart.totalCart());
+			// SendMail sm = new SendMail();
+			// sm.sendMail(users.getUserEmail(), "Outlet's orders confirm message", "Hello,
+			// " + users.getUserEmail()+ "\nTotal " + cart.totalCart());
 			cart = new Cart();
 			session.setAttribute("cart", cart);
 		} catch (Exception e) {
-			
+
 		}
 		response.sendRedirect("/Shop/index.jsp");
 	}
