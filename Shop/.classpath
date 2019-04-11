@@ -20,5 +20,7 @@
 	<classpathentry kind="lib" path="/home/vnd/Desktop/github/Java_webapp/online-shopping-webapp/Shop/lib/mailapi.jar"/>
 	<classpathentry kind="lib" path="/home/vnd/Desktop/github/Java_webapp/online-shopping-webapp/Shop/lib/imap.jar"/>
 	<classpathentry kind="lib" path="/home/vnd/Desktop/github/Java_webapp/online-shopping-webapp/Shop/lib/dsn.jar"/>
+	<classpathentry kind="lib" path="/opt/tomcat-latest/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="/opt/tomcat-latest/lib/jstl-1.2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
