@@ -34,23 +34,24 @@
 			<div class="gagal">ini adalah notifikasi pertanda gagal</div>
 
 			<div class="sukses">ini adalah notifikasi pertanda sukses</div>
+			
 			<table class="data">
+			
 				<tr class="data">
 					<th class="data" width="30px">No</th>
-					<th class="data">Nama</th>
-					<th class="data">Email</th>
-					<th class="data">Telepon</th>
-					<th class="data" width="75px">Pilihan</th>
+					<th class="data">Category ID</th>
+					<th class="data">Category Name</th>
+					<th class="data" width="75px">Option</th>
 				</tr>
+				
 				<tr class="data">
 					<td class="data" width="30px">1</td>
 					<td class="data">Data Anda</td>
 					<td class="data">Data Anda</td>
-					<td class="data">Data Anda</td>
 					<td class="data" width="75px">
 						<center>
-							<a href="#"><img src="mos-css/img/oke.png"></a>&nbsp;&nbsp;&nbsp;
-							<a href="#"><img src="mos-css/img/detail.png"></a>
+							<a href="#">Edit</a>&nbsp;&nbsp; | &nbsp;&nbsp;
+							<a href="#">Delete></a>
 						</center>
 					</td>
 				</tr>
