@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -39,7 +40,6 @@ public class CategoryDAO {
 		} catch (SQLException e) {
 			Logger.getLogger(CategoryDAO.class.getName()).log(Level.SEVERE, null, e);
 		}
-		
 		return false;
 		
 	}
@@ -79,9 +79,9 @@ public class CategoryDAO {
 	public static void main (String[] args) throws SQLException {
 		CategoryDAO dao = new CategoryDAO(); 
 		//for(int i=1; i < 10;i++) {
-		//	dao.insertCategory(new Category(i, "Category " + i));
+			//dao.insertCategory(new Category(i, "Category " + i));
 		//}
-		//System.out.println(dao.updateCategory(new Category(8, "nhanvnguyen")));
-		System.out.println(dao.deleteCategory(1));
+		//System.out.println(dao.insertCategory(new Category(new Date().getTime(), "nhanvnguyen")));
+
 	}
 }

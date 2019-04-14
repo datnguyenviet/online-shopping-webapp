@@ -54,13 +54,13 @@
 				%>
 				
 				<tr class="data">
-					<td class="data" width="30px"><%= count %></td>
+					<td class="data" width="30px"><%=count%></td>
 					<td class="data"><%= category.getCategoryID() %></td>
 					<td class="data"><%= category.getCategoryName() %></td>
 					<td class="data" width="90px">
 						<center>
-							<a href="#">Edit</a>&nbsp;&nbsp; | &nbsp;&nbsp;
-							<a href="#">Delete></a>
+							<a href="${root}/admin/update_category.jsp?command=update&category_id=<%=category.getCategoryID()%>">Edit</a>&nbsp;&nbsp; | &nbsp;&nbsp;
+							<a href="${root}/ManagerCategoryServlet?command=delete&category_id=<%=category.getCategoryID()%>">Delete></a>
 						</center>
 					</td>
 				</tr>
