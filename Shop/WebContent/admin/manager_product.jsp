@@ -10,8 +10,7 @@
 	<meta charset="UTF-8">
 	<title>Manager Product</title>
 		<c:set var="root" value="${pageContext.request.contextPath}"/>
-		<link href="${pageContent.reuqest.contextPath}/css/moss-style.css" rel='stylesheet' type='text/css' />
-		<link rel="stylesheet" type="text/css" href="mos-css/mos-style.css"> <!--pemanggilan file css-->
+		<link href="${root}/css/mos-style.css" rel='stylesheet' type='text/css' />
 
 </head>
 <body>

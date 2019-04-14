@@ -4,7 +4,7 @@
 /*YM			: ariecupu@ymail.com*/
 /*Official Site	: arirusmanto.com*/
 body {
-	background: url(img/latar.jpg);
+	background: url(../img/latar.jpg);
 	margin: 0;
 	padding: 0;
 	font-family: Arial;
@@ -32,7 +32,7 @@ input.pendek:focus{-moz-box-shadow: 0px 0px 5px #dcdcdc;-webkit-box-shadow: 0px 
 	cursor: pointer;
 	padding: 4px 10px 4px 10px;
 	color: #fff;
-	background: url(img/green.jpg) repeat left center;
+	background: url(../img/green.jpg) repeat left center;
 	border: 1px solid #71bb3b;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -51,7 +51,7 @@ table {border:none;font-size: 12px;}
 td{border:none; padding: 5px;}
 
 table.data {border: 1px solid #dcdcdc; margin: 10px 0px 20px 0px; width: 97%; border-collapse: collapse;font-size: 12px;}
-th.data {padding: 8px 4px 8px 4px;border: 1px solid #dcdcdc; background: url(img/green.jpg)repeat left center;text-shadow: 1px 0px #003362;color: #fff }
+th.data {padding: 8px 4px 8px 4px;border: 1px solid #dcdcdc; background: url(../img/green.jpg)repeat left center;text-shadow: 1px 0px #003362;color: #fff }
 td.data {padding: 4px; border: 1px solid #dcdcdc;color: #5b5b5b;vertical-align: top;}
 tr.data {background: #fff}
 tr.data:hover {background: #feffdc;}
@@ -62,7 +62,7 @@ tr.data:hover small a:hover{color: #000;}
 tr.data:hover small {color: #5b5b5b;}		
 .quoteOfDay {
 	border: 1px solid #cbe0b5;
-	background: #f7ffe8 url(img/daun.png) no-repeat left center;
+	background: #f7ffe8 url(../img/daun.png) no-repeat left center;
 	float: left;
 	width: 640px;
 	padding: 10px 10px 10px 70px;
@@ -73,7 +73,7 @@ tr.data:hover small {color: #5b5b5b;}
 }
 .sukses {
 	border: 1px solid #cbe0b5;
-	background: #f7ffe8 url(img/sukses.png) no-repeat left center;
+	background: #f7ffe8 url(../img/sukses.png) no-repeat left center;
 	float: left;
 	width: 640px;
 	padding: 15px 10px 15px 50px;
@@ -84,7 +84,7 @@ tr.data:hover small {color: #5b5b5b;}
 }
 .gagal {
 	border: 1px solid #e78686;
-	background: #ffe1e1 url(img/gagal.png) no-repeat left center;
+	background: #ffe1e1 url(../img/gagal.png) no-repeat left center;
 	float: left;
 	width: 640px;
 	padding: 15px 10px 15px 50px;
@@ -95,7 +95,7 @@ tr.data:hover small {color: #5b5b5b;}
 }
 .informasi {
 	border: 1px solid #86afe7;
-	background: #e7f1ff url(img/informasi.png) no-repeat left center;
+	background: #e7f1ff url(../img/informasi.png) no-repeat left center;
 	float: left;
 	width: 640px;
 	padding: 15px 10px 15px 50px;
@@ -107,7 +107,7 @@ tr.data:hover small {color: #5b5b5b;}
 #header {
 	width: 100%;
 	border-bottom: 1px solid #dcdcdc;
-	background: url(img/headerbg.jpg) repeat left;
+	background: url(../img/headerbg.jpg) repeat left;
 	height: 75px;
 	z-index: 1000;
 	-moz-box-shadow: 0px 0px 8px #dcdcdc;
@@ -115,7 +115,7 @@ tr.data:hover small {color: #5b5b5b;}
 }
 .inHeader {
 	float: center;
-	background: url(img/logo.png) no-repeat left center;
+	background: url(../img/logo.png) no-repeat left center;
 	margin: auto;
 	width: 920px;
 	height: 45px;
@@ -124,7 +124,7 @@ tr.data:hover small {color: #5b5b5b;}
 	border-left: 0px solid #dcdcdc;
 }
 .inHeaderLogin {
-	background: url(img/logo.png) no-repeat left center;
+	background: url(../img/logo.png) no-repeat left center;
 	height: 75px;
 }
 .mosAdmin {
@@ -133,7 +133,7 @@ tr.data:hover small {color: #5b5b5b;}
 	margin: 0 1px 0 auto;
 	text-align: right;
 	padding: 10px 40px 10px 10px;
-	background: url(img/Administrator.png) no-repeat right center;
+	background: url(../img/Administrator.png) no-repeat right center;
 	text-shadow: 1px 1px #fff;
 }
 #loginForm {
@@ -142,7 +142,7 @@ tr.data:hover small {color: #5b5b5b;}
 	border: 1px solid #dcdcdc;
 	float: center;
 	text-align: left;
-	background:#fff url(img/lock.png) no-repeat left center;
+	background:#fff url(../img/lock.png) no-repeat left center;
 	margin: 50px auto 0 auto;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -157,7 +157,7 @@ tr.data:hover small {color: #5b5b5b;}
 	text-align: left;
 	height: 20px;
 	border-bottom: 1px solid #dcdcdc;
-	background: url(img/headerbg.jpg) repeat left center;
+	background: url(../img/headerbg.jpg) repeat left center;
 	-moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px;
 	-webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px;
 }
@@ -174,7 +174,7 @@ tr.data:hover small {color: #5b5b5b;}
 	float: center;
 	margin: auto;
 	text-align: left;
-	background: #fff url(img/bg_kiri.png) repeat-y;
+	background: #fff url(../img/bg_kiri.png) repeat-y;
 	-moz-box-shadow: 0px 0px 8px #dcdcdc;
 	-webkit-box-shadow: 0px 0px 8px #dcdcdc;
 }
@@ -188,7 +188,7 @@ tr.data:hover small {color: #5b5b5b;}
 #leftBar ul {list-style: none;padding: 0; margin: 0;font-size: 13px;}
 #leftBar ul li {
 	width: 164px;
-	background: url(img/icon-left.png) no-repeat left center, url(img/green.jpg) repeat left center;
+	background: url(../img/icon-left.png) no-repeat left center, url(../img/green.jpg) repeat left center;
 	padding: 10px 0 10px 10px; margin-top: 8px;margin-left: 9px;
 	border: 1px solid #dcdcdc;
 	-moz-border-radius-topleft: 8px;-moz-border-radius-bottomleft: 8px;

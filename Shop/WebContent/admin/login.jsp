@@ -9,8 +9,7 @@
 	<title>Login</title>
 	
 	<c:set var="root" value="${pageContext.request.contextPath}" />
-	<link href="${pageContent.reuqest.contextPath}/css/moss-style.css" rel='stylesheet' type='text/css' />
-	<link rel="stylesheet" type="text/css" href="mos-css/mos-style.css">
+	<link href="${root}/css/mos-style.css" rel='stylesheet' type='text/css' />
 	
 	
 	
