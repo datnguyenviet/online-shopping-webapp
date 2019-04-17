@@ -75,4 +75,21 @@ public class UsersDAO {
 		}
 		return null;
 	}
+	
+	public Users getUser(Long userID) {
+		try {
+		Connection connection = DBConnect.getConnection();
+		String sql = "SELECT * FROM users WHERE user_id = ?";
+		PreparedStatement ps = connection.prepareCall(sql);
+		ps.setLong(1, userID);
+		ResultSet rs = ps.executeQuery();
+		Users u = new Users();
+		while(rs.next()) {
+			u.setUserEmail(rs.getString("user_email"));
+		}
+	} catch (SQLException ex) {
+		Logger.getLogger(UsersDAO.class.getName()).log(Level.SEVERE, null, ex);
+	}
+		return null;
+	}
 }
